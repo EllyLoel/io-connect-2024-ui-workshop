@@ -12,30 +12,13 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License. */
 
-[horizontal-scroll] {
-  overflow-x: auto;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x mandatory;
+.name {
+  color: var(--text-1);
+  font-weight: 400;
 
-  padding-block-end: 1rem;
-  padding-inline-end: var(--body-rails);
-
-  /* if the body has an open popover in it, disallow scrolling */
-  body:has(:popover-open) & {
+  @media (width <= 350px) {
+    /* hold the grid track, take no space */
+    inline-size: 0;
     overflow: hidden;
   }
-  
-  /* always good to have scroll padding match the actual padding */
-  @media (width <= 768px) {
-    scroll-padding-inline: var(--body-rails);
-    padding: 0 1rem 1rem;
-  }
-}
-
-[horizontal-snapping] > * {
-  scroll-snap-align: start;
-}
-
-[hide-horizontal-overflow] {
-  overflow-x: hidden;
 }

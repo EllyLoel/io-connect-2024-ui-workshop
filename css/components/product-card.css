@@ -35,7 +35,7 @@ limitations under the License. */
     border-color: var(--text-2);
   }
 
-  & > figcaption {
+  & > .product-details {
     display: grid;
     text-align: end;
     justify-content: end;
@@ -51,10 +51,6 @@ limitations under the License. */
     > .product-cost {
       place-self: end;
     }
-  }
-
-  & > button {
-    padding: 0;
   }
 
   & :is(p, small) {
@@ -98,7 +94,7 @@ limitations under the License. */
     align-items: flex-start;
   }
 
-  & span {
+  & span:not([class]) {
     font-size: 0.8rem;
     color: var(--brand-primary);
     margin-block-end: 0.25rem;
@@ -120,7 +116,7 @@ limitations under the License. */
       inline-size: 100%;
     }
 
-    > figcaption {
+    > .product-details {
       z-index: 1;
       display: flex;
       justify-content: space-between;
@@ -142,15 +138,11 @@ limitations under the License. */
       font-size: 1.75rem;
     }
 
-    a, [money] {
+    a, .money {
       color: var(--color-1);
     }
 
     p, small {
-      color: var(--color-4);
-    }
-
-    [money] > sup {
       color: var(--color-4);
     }
   }
@@ -166,7 +158,7 @@ limitations under the License. */
       inline-size: 100%;
     }
 
-    figcaption {
+    .product-details {
       display: flex;
       justify-content: space-between;
       padding: 1rem;

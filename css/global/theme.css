@@ -14,8 +14,8 @@ limitations under the License. */
 
 :root {
   /* brand */
-  --brand-primary: light-dark(deeppink, hotpink);
-  --brand-secondary: light-dark(cyan, lightblue);
+  --brand-primary: light-dark(deeppink, #f6c);
+  --brand-secondary: light-dark(cyan, #5BCEFA);
 
   /* configure the color palette */
   --palette-hue: 250; /* <angle */

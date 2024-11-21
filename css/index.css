@@ -20,28 +20,21 @@ limitations under the License. */
 @import './global/typography.css' layer(base);
 @import './global/focus.css' layer(base);
 
-@import './utilities/scrolling.css' layer(utilities);
 @import './animations/generic.css' layer(animations);
 
 @import './components/body.css' layer(components);
 @import './components/nav.css' layer(components);
 @import './components/header.css' layer(components);
 @import './components/main.css' layer(components);
-@import './components/article.css' layer(components);
-@import './components/brand.css' layer(components);
+@import './components/name.css' layer(components);
 @import './components/link.css' layer(components);
-@import './components/aside.css' layer(components);
+@import './components/form.css' layer(components);
 @import './components/button.css' layer(components);
 @import './components/button-list.css' layer(components);
-@import './components/search.css' layer(components);
 @import './components/greeting.css' layer(components);
 @import './components/product-card.css' layer(components);
 @import './components/picture.css' layer(components);
 @import './components/svg.css' layer(components);
 @import './components/money.css' layer(components);
-@import './components/most-popular-scroller.css' layer(components);
-@import './components/fresh-releases-scroller.css' layer(components);
-@import './components/super-hot-scroller.css' layer(components);
+@import './components/most-popular-container.css' layer(components);
 @import './components/theme-toggle.css' layer(components);
-@import './components/scroll-progress.css' layer(components);
-@import './components/lightbox.css' layer(components);

@@ -12,5 +12,4 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import './aside.js'
-import './lightbox.js'
+import './form.js'

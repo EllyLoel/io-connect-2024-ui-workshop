@@ -13,10 +13,10 @@ See the License for the specific language governing permissions and
 limitations under the License. */
 
 /* ensure sidenav is on top of any view transition elements */
-::view-transition-group(--nav) {
+::view-transition-group(nav) {
   z-index: 2;
 }
 
 nav {
-  view-transition-name: --nav;
+  view-transition-name: nav;
 }

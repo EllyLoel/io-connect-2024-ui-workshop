@@ -13,15 +13,17 @@ See the License for the specific language governing permissions and
 limitations under the License. */
 
 body {
-  font-family: "Roboto", system-ui;
+  font-family: system-ui;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Google Sans", system-ui;
+  font-family: system-ui;
   text-wrap: balance;
+  text-wrap: pretty;
 }
 
 p {
   line-height: 1.5;
+  text-wrap: balance;
   text-wrap: pretty;
 }
