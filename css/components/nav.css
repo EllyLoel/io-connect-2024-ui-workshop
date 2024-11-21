@@ -12,19 +12,13 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License. */
 
-@import "../animations/view-transition/nav.css";
-
 nav {
   background: var(--surface-document);
-  z-index: 1;
   block-size: var(--body-rails);
   display: grid;
   grid-auto-flow: column;
   align-items: center;
   grid-template-columns: var(--body-rails) minmax(min-content, var(--sidebar-width)) 1fr var(--body-rails);
-
-  position: sticky;
-  top: 0;
 
   & > :is(:first-child, :last-child) {
     justify-self: center;
@@ -32,5 +26,33 @@ nav {
 
   & > button:not(:last-child) {
     justify-self: end;
+  }
+
+  & button[aria-label="Cart"]{
+    position: relative;
+    gap: 0;
+
+    > * {
+      grid-area: 1 / 1;
+    }
+
+    &[data-count]::after {
+      content: attr(data-count);
+      position: absolute;
+      background-color: var(--brand-primary);
+      border-radius: calc(infinity* 1px);
+      aspect-ratio: 1;
+      font-size: 0.8em;
+      grid-template-columns: 1.2em;
+      display: grid;
+      padding-inline-start: 0.15em;
+      padding-inline-end: 0.25em;
+      padding-block-start: 0.2em;
+      padding-block-end: 0.125em;
+      align-items: center;
+      font-variant-numeric: tabular-nums;
+      left: calc(90% - 1rem);
+      bottom: calc(90% - 1rem);
+    }
   }
 }

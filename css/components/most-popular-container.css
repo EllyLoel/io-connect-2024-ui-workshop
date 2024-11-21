@@ -14,7 +14,7 @@ limitations under the License. */
 
 .most-popular-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 20rem);
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
   gap: 1rem;
   padding: 0;
 }

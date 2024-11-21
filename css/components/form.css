@@ -12,43 +12,31 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License. */
 
-@import "../animations/view-transition/form.css";
-
 form {
-  position: sticky;
-  align-self: start; /* grid children who want to be sticky */
-  z-index: 1;
-  inset-block-start: var(--body-rails);
-  background: var(--surface-document);
-
-  /* switch to a horizontal scroller on mobile */
-  @media (width <= 768px) {
-    overflow: auto hidden;
-    scrollbar-width: thin;
-    padding-inline: 1rem;
-    padding-block-end: 1ex;
-    border-image: none;
-  }
-
-  /* using a fieldset enables the single selection mechanism */
-  /* https://www.youtube.com/watch?v=vwgihljM2e4 */
   > fieldset {
     border: none;
     padding: 0;
     margin: 0;
 
-    display: grid;
-    place-items: center start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     gap: 1rem 2rem;
 
     @media (width <= 768px) {
-      grid-auto-flow: column;
-      grid-auto-columns: max-content;
+      flex-direction: row;
+      row-gap: 0.25rem;
     }
 
     > legend {
-      block-size: 0;
-      overflow: hidden;
+      margin-block-end: 1em;
+      padding: 0;
+      font-size: 1.5em;
+      font-weight: 200;
+
+      @media (width <= 768px) {
+        margin-block-end: 0.5em;
+      }
     }
 
     label {
@@ -63,9 +51,9 @@ form {
         display: block;
         position: absolute;
         /* side rail size, including this elements size, / 2 and then made negative */
-        inset-inline-start: calc((var(--body-rails) + 4px) / 2 * -1);
+        inset-inline-start: calc((var(--body-rails) + 0.25rem) / 2 * -1);
         inset-block-start: 0;
-        inline-size: 4px;
+        inline-size: 0.25rem;
         block-size: 100%;
         border-radius: 10px;
         transition: background-color 0.3s ease;
@@ -74,9 +62,9 @@ form {
       @media (width <= 768px) {
         &::before {
           inset-inline-start: 0;
-          inset-block-start: calc(100% + 4px);
+          inset-block-start: 90%;
           inline-size: 100%;
-          block-size: 4px;
+          block-size: 0.25rem;
         }
       }
 
@@ -87,16 +75,12 @@ form {
         &::before {
           background-color: var(--brand-secondary);
         }
-
-        @media (width <= 768px) {
-          text-decoration: none;
-        }
       }
 
       &:has(:checked) {
         color: var(--text-1);
 
-        &:before {
+        &::before {
           background-color: var(--brand-primary);
         }
       }

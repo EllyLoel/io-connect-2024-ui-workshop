@@ -28,7 +28,7 @@ limitations under the License. */
   padding-inline: .5rem .75rem;
   box-sizing: border-box;
   margin: 0;
-  border: 1px solid var(--surface-3);
+  border: 0.125rem solid var(--surface-3);
   border-radius: var(--brand-border_radius);
 
   &:focus-within {
@@ -39,17 +39,24 @@ limitations under the License. */
     display: grid;
     text-align: end;
     justify-content: end;
+    justify-items: end;
+    gap: 1rem;
 
     > * {
       display: grid;
     }
 
     > .product-meta {
-      place-self: start;
+      place-self: end;
     }
 
     > .product-cost {
       place-self: end;
+    }
+
+    > button {
+      border: 0.0625rem solid currentColor;
+      inline-size: fit-content;
     }
   }
 
@@ -76,7 +83,6 @@ limitations under the License. */
   & img {
     width: 10rem;
     height: auto;
-    object-fit: contain;
   }
 
   & small {
@@ -100,66 +106,24 @@ limitations under the License. */
     margin-block-end: 0.25rem;
   }
 
-  /* square layout */
-  @container (25rem <= inline-size < 30rem) {
-    aspect-ratio: 1;
-    grid: 1fr / 1fr;
-    block-size: 100%;
-    place-items: end stretch;
-    padding: .5rem;
-
-    > * {
-      grid-area: 1 / 1;
-    }
-
-    img {
-      inline-size: 100%;
-    }
-
-    > .product-details {
-      z-index: 1;
-      display: flex;
-      justify-content: space-between;
-      padding: 1rem;
-      padding-block-start: 3rem;
-      background: linear-gradient(to top, #000e, 50%, #0003, #0000);
-
-      > .product-meta {
-        text-align: start;
-      }
-
-      > :is(.product-meta, .product-cost) {
-        align-content: space-between;
-        place-self: end;
-      }
-    }
-
-    a {
-      font-size: 1.75rem;
-    }
-
-    a, .money {
-      color: var(--color-1);
-    }
-
-    p, small {
-      color: var(--color-4);
-    }
-  }
-
   /* portrait layout */
-  @container (25rem < inline-size < 40rem) {
-    aspect-ratio: 3/4;
-    grid: auto 1fr / 1fr;
+  @container (inline-size < 30em) {
+    grid: auto 1fr / auto;
     block-size: 100%;
     place-items: end stretch;
 
     img {
+      aspect-ratio: 5/3;
       inline-size: 100%;
+      block-size: auto;
+      overflow: clip;
+      object-fit: cover;
     }
 
     .product-details {
       display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
       justify-content: space-between;
       padding: 1rem;
 
@@ -172,6 +136,10 @@ limitations under the License. */
         > span {
           margin: 0;
         }
+      }
+
+      > button {
+        flex-basis: 100%;
       }
     }
 

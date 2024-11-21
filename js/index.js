@@ -13,3 +13,4 @@
 // limitations under the License.
 
 import './form.js'
+import './cart.js'

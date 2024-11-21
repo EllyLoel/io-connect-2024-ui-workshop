@@ -21,14 +21,15 @@ limitations under the License. */
 @import './global/focus.css' layer(base);
 
 @import './animations/generic.css' layer(animations);
+@import './animations/view-transition/cart.css' layer(animations);
 
 @import './components/body.css' layer(components);
 @import './components/nav.css' layer(components);
-@import './components/header.css' layer(components);
 @import './components/main.css' layer(components);
 @import './components/name.css' layer(components);
 @import './components/link.css' layer(components);
 @import './components/form.css' layer(components);
+@import './components/hr.css' layer(components);
 @import './components/button.css' layer(components);
 @import './components/button-list.css' layer(components);
 @import './components/greeting.css' layer(components);

@@ -14,11 +14,13 @@ limitations under the License. */
 
 main {
   display: grid;
+  margin-inline: 1rem;
   gap: 2rem 0;
   padding-block-end: 10vh;
   
   @media (width >= 768px) {
     grid-template-columns: var(--sidebar-width) 1fr;
     margin-inline-start: var(--body-rails);
+    margin-inline-end: 0;
   }
 }

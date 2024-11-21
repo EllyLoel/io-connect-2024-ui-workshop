@@ -12,11 +12,10 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License. */
 
-@import "../animations/scroll-driven/greeting.css";
-
 .greeting {
   font-size: 2.5rem;
   font-weight: 200;
+  text-transform: none;
   margin-block: 2vh .5vh;
   margin-inline-start: 1rem;
 

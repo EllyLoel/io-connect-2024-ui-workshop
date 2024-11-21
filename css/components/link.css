@@ -18,16 +18,11 @@ a {
   grid-auto-flow: column;
   gap: 0.5rem;
   align-items: center;
-
+  text-underline-offset: 0.1em;
+  
   &:hover {
     color: var(--text-1);
-  }
 
-  &:not(:hover) {
-    text-decoration: none;
-  }
-
-  &:hover {
     & > svg > .secondary {
       stroke: var(--text-2);
       fill: var(--surface-document);
