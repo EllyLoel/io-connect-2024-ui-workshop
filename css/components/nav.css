@@ -21,6 +21,7 @@ nav {
 	grid-auto-flow: column;
 	align-items: center;
 	grid-template-columns: var(--body-rails) minmax(min-content, var(--sidebar-width)) 1fr var(--body-rails);
+	view-transition-name: nav;
 
 	& > :is(:first-child, :last-child) {
 		justify-self: center;
