@@ -1,5 +1,4 @@
 const handleViewTransition = async (event) => {
-	debugger;
 	const productCard = document.querySelector(".product-card");
 	const image = productCard.querySelector("img");
 	const name = productCard.querySelector(".product-meta a");
