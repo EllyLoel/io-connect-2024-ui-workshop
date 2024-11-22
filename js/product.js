@@ -16,15 +16,15 @@ const handleViewTransition = async (event) => {
 	button.style.viewTransitionName = "button";
 	buttonInner.style.viewTransitionName = "button-inner";
 
-	await event.viewTransition.finished;
-
-	image.style.viewTransitionName = "";
-	name.style.viewTransitionName = "";
-	type.style.viewTransitionName = "";
-	note.style.viewTransitionName = "";
-	price.style.viewTransitionName = "";
-	button.style.viewTransitionName = "";
-	buttonInner.style.viewTransitionName = "";
+	event.viewTransition.finished.then(() => {
+		image.style.viewTransitionName = "";
+		name.style.viewTransitionName = "";
+		type.style.viewTransitionName = "";
+		note.style.viewTransitionName = "";
+		price.style.viewTransitionName = "";
+		button.style.viewTransitionName = "";
+		buttonInner.style.viewTransitionName = "";
+	});
 };
 
 window.addEventListener("pagereveal", handleViewTransition);
