@@ -12,6 +12,16 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License. */
 
+::view-transition-group(image),
+::view-transition-group(name),
+::view-transition-group(type),
+::view-transition-group(note),
+::view-transition-group(price),
+::view-transition-group(button),
+::view-transition-group(button-inner) {
+	z-index: 1;
+}
+
 ::view-transition-old(image),
 ::view-transition-new(image) {
 	animation: none;
@@ -28,22 +38,22 @@ limitations under the License. */
 	object-fit: contain;
 }
 
-::view-transition-new(name),
 ::view-transition-old(name),
-::view-transition-new(type),
+::view-transition-new(name),
 ::view-transition-old(type),
-::view-transition-new(note),
+::view-transition-new(type),
 ::view-transition-old(note),
-::view-transition-new(price),
+::view-transition-new(note),
 ::view-transition-old(price),
-::view-transition-new(button),
-::view-transition-old(button) {
+::view-transition-new(price),
+::view-transition-old(button),
+::view-transition-new(button) {
 	block-size: 100%;
 	inline-size: 100%;
 }
 
-::view-transition-new(button-inner),
-::view-transition-old(button-inner) {
+::view-transition-old(button-inner),
+::view-transition-new(button-inner) {
 	block-size: 100%;
 	inline-size: fit-content;
 }

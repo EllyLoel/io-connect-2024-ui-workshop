@@ -6,7 +6,7 @@
 		<title>Magic Kid - Same-document view transitions</title>
 		<meta name="description" content="Magic Kid Lime Puffer - Limited Edition" />
 		<meta name="theme-color" content="#ffffff" />
-		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="../css/index.css" />
 		<style>
 			main {
 				grid-template-columns: 1fr 1fr;
@@ -124,7 +124,7 @@
 				inherits: true;
 			}
 		</style>
-		<script src="js/theme-toggle.js"></script>
+		<script type="module" src="../js/theme-toggle.js"></script>
 	</head>
 	<body>
 		<header>
@@ -133,7 +133,7 @@
 					<title>Pink triangle</title>
 					<path fill="#f6c" d="m5 5 130 225L265 5z" />
 				</svg>
-				<span class="name">I'm a shop</span>
+				<a href="/" class="name">I'm a shop</a>
 				<button small-icon class="theme-toggle" id="theme-toggle" aria-label="auto" aria-live="polite">
 					<svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
 						<mask class="moon" id="moon-mask">
@@ -170,7 +170,7 @@
 		<main>
 			<div class="product-image">
 				<img
-					src="products/1.jpg"
+					src="/products/1.jpg"
 					loading="lazy"
 					height="512"
 					width="512"

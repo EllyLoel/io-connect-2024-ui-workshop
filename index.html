@@ -15,7 +15,7 @@ limitations under the License. -->
 		<title>Same-document view transitions</title>
 		<meta name="theme-color" content="#ffffff" />
 		<link rel="stylesheet" href="css/index.css" />
-		<script src="js/theme-toggle.js"></script>
+		<script type="module" src="js/theme-toggle.js"></script>
 		<script type="module" src="js/index.js"></script>
 	</head>
 	<body>
@@ -25,7 +25,7 @@ limitations under the License. -->
 					<title>Pink triangle</title>
 					<path fill="#f6c" d="m5 5 130 225L265 5z" />
 				</svg>
-				<span class="name">I'm a shop</span>
+				<a href="/" class="name">I'm a shop</a>
 				<button small-icon class="theme-toggle" id="theme-toggle" aria-label="auto" aria-live="polite">
 					<svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
 						<mask class="moon" id="moon-mask">
@@ -93,7 +93,7 @@ limitations under the License. -->
 							</picture>
 							<div class="product-details">
 								<div class="product-meta">
-									<a href="/magic-kid">Magic Kid</a>
+									<a href="/magic-kid/">Magic Kid</a>
 									<small>Lime Puffer</small>
 								</div>
 								<div class="product-cost">
@@ -348,24 +348,6 @@ limitations under the License. -->
 									<span class="money">$29.99</span>
 								</div>
 								<button type="button" id="add-to-cart-15">Add to card</button>
-							</div>
-						</div>
-					</li>
-					<li class="product-card-container">
-						<div class="product-card" data-categories="puffer jackets rainwear">
-							<picture>
-								<img src="products/1.jpg" loading="lazy" height="512" width="512" alt="" />
-							</picture>
-							<div class="product-details">
-								<div class="product-meta">
-									<a href="#">Magic Kid</a>
-									<small>Lime Puffer</small>
-								</div>
-								<div class="product-cost">
-									<span>Limited Edition</span>
-									<span class="money">$29.99</span>
-								</div>
-								<button type="button" id="add-to-cart-16">Add to card</button>
 							</div>
 						</div>
 					</li>

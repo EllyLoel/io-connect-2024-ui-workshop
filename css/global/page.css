@@ -13,19 +13,25 @@ See the License for the specific language governing permissions and
 limitations under the License. */
 
 @view-transition {
-  navigation: auto;
+	navigation: auto;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html {
-  color-scheme: light dark;
-  background: var(--surface-document);
-  color: var(--text-1);
+	color-scheme: light dark;
+	background: var(--surface-document);
+	color: var(--text-1);
 }
 
 body {
-  margin: 0;
+	margin: 0;
+	opacity: 100%;
+	transition: opacity ease-in-out 300ms;
+
+	@starting-style {
+		opacity: 0%;
+	}
 }

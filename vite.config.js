@@ -4,10 +4,7 @@ import { defineConfig } from "vite";
 export default defineConfig({
 	build: {
 		rollupOptions: {
-			input: {
-				main: resolve(__dirname, "src/index.html"),
-				nested: resolve(__dirname, "src/magic-kid/index.html"),
-			},
+			input: [resolve(__dirname, "index.html"), resolve(__dirname, "magic-kid/index.html")],
 		},
 	},
 });

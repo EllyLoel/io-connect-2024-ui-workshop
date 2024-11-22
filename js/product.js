@@ -13,8 +13,8 @@
 // limitations under the License.
 
 const handleViewTransition = async (event) => {
-	console.log(event);
-	const productCard = document.querySelector("product-card");
+	debugger;
+	const productCard = document.querySelector(".product-card");
 	const image = productCard.querySelector("img");
 	const name = productCard.querySelector(".product-meta a");
 	const type = productCard.querySelector(".product-meta small");
