@@ -12,6 +12,14 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License. */
 
-::view-transition-new(product-1) {
-    display: none;
+main {
+	display: grid;
+	margin-inline: 1rem;
+	gap: 2rem 0;
+	padding-block-end: 10vh;
+
+	@media (width >= 768px) {
+		grid-template-columns: var(--sidebar-width) 1fr;
+		margin-inline: var(--body-rails);
+	}
 }
