@@ -7,7 +7,118 @@
   <title>Magic Kid - Same-document view transitions</title>
   <meta name="description" content="Magic Kid Lime Puffer - Limited Edition">
   <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="css/index.css"> 
+  <link rel="stylesheet" href="css/index.css">
+  <style>
+    main {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-inline: var(--body-rails);
+
+        @media (width < 800px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    img {
+        max-inline-size: 100%;
+        inline-size: 100%;
+        block-size: auto;
+    }
+
+    h1,
+    p {
+        margin: 0;
+    }
+
+    h1 {
+        line-height: 0.78;
+    }
+
+    .type {
+        font-size: 1.5em;
+        font-weight: 200;
+    }
+
+    .price {
+        font-size: 1.5em;
+    }
+
+    .note {
+        font-size: 0.8em;
+        color: var(--brand-primary);
+    }
+
+    .product-info button {
+        border: 0.0625rem solid currentColor;
+        inline-size: 100%;
+        margin-block-start: 1em;
+    }
+
+    .text-fit {
+        display: flex;
+        container-type: inline-size;
+
+        --captured-length: initial;
+        --support-sentinel: var(--captured-length, 9999px);
+
+        & > [aria-hidden] {
+            visibility: hidden;
+        }
+
+        & > :not([aria-hidden]) {
+            flex-grow: 1;
+            container-type: inline-size;
+
+            --captured-length: 100cqi;
+            --available-space: var(--captured-length);
+
+            & > * {
+            --support-sentinel: inherit;
+            --captured-length: 100cqi;
+            --ratio: tan(atan2(
+                var(--available-space),
+                var(--available-space) - var(--captured-length)
+            ));
+            --font-size: clamp(
+                1em,
+                1em * var(--ratio),
+                var(--max-font-size, infinity * 1px)
+                -
+                var(--support-sentinel)
+            );
+            inline-size: var(--available-space);
+
+            &:not(.text-fit) {
+                display: block;
+                font-size: var(--font-size);
+
+                @container (inline-size > 0) {
+                white-space: nowrap;
+                }
+            }
+
+            &.text-fit {
+                --captured-length2: var(--font-size);
+                font-variation-settings:
+                'opsz'
+                tan(atan2(var(--captured-length2), 1px));
+            }
+            }
+        }
+    }
+
+    @property --captured-length {
+        syntax: "<length>";
+        initial-value: 0px;
+        inherits: true;
+    }
+
+    @property --captured-length2 {
+        syntax: "<length>";
+        initial-value: 0px;
+        inherits: true;
+    }
+  </style>
   <script src="js/theme-toggle.js"></script>
 </head>
 <body>
@@ -47,18 +158,19 @@
         </nav>
     </header>
     <main>
-        <section class="product-detail">
-            <div class="product-image">
-                <img src="products/1.jpg" loading="lazy" height="512" width="512" alt="Magic Kid Lime Puffer">
-            </div>
-            <div class="product-info">
-                <h1>Magic Kid</h1>
-                <h2>Lime Puffer</h2>
-                <p class="price">$29.99</p>
-                <p class="description">Limited Edition</p> 
-                <button type="button" id="add-to-cart-magic-kid">Add to Cart</button>
-            </div>
-        </section>
+        <div class="product-image">
+            <img src="products/1.jpg" loading="lazy" height="512" width="512" alt="Lime green rainwear puffer jacket."  style="view-transition-name: image;">
+        </div>
+        <div class="product-info">
+            <h1 class="text-fit">
+                <span><span style="view-transition-name: name;">Magic Kid</span></span>
+                <span aria-hidden="true">Magic Kid</span>
+            </h1>
+            <p class="type" style="view-transition-name: type;">Lime Puffer</p>
+            <p class="note" style="view-transition-name: note;">Limited Edition</p> 
+            <p class="price" style="view-transition-name: price;">$29.99</p>
+            <button type="button" id="add-to-cart-1" style="view-transition-name: button;">Add to Cart</button>
+        </div>
     </main>
 </body>
 </html>
