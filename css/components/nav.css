@@ -10,49 +10,51 @@ Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
-limitations under the License. */
+limitations under the License. 
+
+Modified by Elly Loel on 22/11/2024 */
 
 nav {
-  background: var(--surface-document);
-  block-size: var(--body-rails);
-  display: grid;
-  grid-auto-flow: column;
-  align-items: center;
-  grid-template-columns: var(--body-rails) minmax(min-content, var(--sidebar-width)) 1fr var(--body-rails);
+	background: var(--surface-document);
+	block-size: var(--body-rails);
+	display: grid;
+	grid-auto-flow: column;
+	align-items: center;
+	grid-template-columns: var(--body-rails) minmax(min-content, var(--sidebar-width)) 1fr var(--body-rails);
 
-  & > :is(:first-child, :last-child) {
-    justify-self: center;
-  }
+	& > :is(:first-child, :last-child) {
+		justify-self: center;
+	}
 
-  & > button:not(:last-child) {
-    justify-self: end;
-  }
+	& > button:not(:last-child) {
+		justify-self: end;
+	}
 
-  & button[aria-label="Cart"]{
-    position: relative;
-    gap: 0;
+	& button[aria-label="Cart"] {
+		position: relative;
+		gap: 0;
 
-    > * {
-      grid-area: 1 / 1;
-    }
+		> * {
+			grid-area: 1 / 1;
+		}
 
-    &[data-count]::after {
-      content: attr(data-count);
-      position: absolute;
-      background-color: var(--brand-primary);
-      border-radius: calc(infinity* 1px);
-      aspect-ratio: 1;
-      font-size: 0.8em;
-      grid-template-columns: 1.2em;
-      display: grid;
-      padding-inline-start: 0.15em;
-      padding-inline-end: 0.25em;
-      padding-block-start: 0.2em;
-      padding-block-end: 0.125em;
-      align-items: center;
-      font-variant-numeric: tabular-nums;
-      left: calc(90% - 1rem);
-      bottom: calc(90% - 1rem);
-    }
-  }
+		&[data-count]::after {
+			content: attr(data-count);
+			position: absolute;
+			background-color: var(--brand-primary);
+			border-radius: calc(infinity * 1px);
+			aspect-ratio: 1;
+			font-size: 0.8em;
+			grid-template-columns: 1.2em;
+			display: grid;
+			padding-inline-start: 0.15em;
+			padding-inline-end: 0.25em;
+			padding-block-start: 0.2em;
+			padding-block-end: 0.125em;
+			align-items: center;
+			font-variant-numeric: tabular-nums;
+			left: calc(90% - 1rem);
+			bottom: calc(90% - 1rem);
+		}
+	}
 }

@@ -10,13 +10,15 @@ Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
-limitations under the License. */
+limitations under the License. 
+
+Modified by Elly Loel on 22/11/2024 */
 
 hr {
-    margin-block: 1rem;
+	margin-block: 1rem;
 
-    @media (width >= 768px) {
-        margin-block: 4rem;
-        margin-inline-end: 2rem;
-    }
+	@media (width >= 768px) {
+		margin-block: 4rem;
+		margin-inline-end: 2rem;
+	}
 }

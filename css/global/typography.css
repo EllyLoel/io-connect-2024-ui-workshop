@@ -10,24 +10,31 @@ Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
-limitations under the License. */
+limitations under the License. 
+
+Modified by Elly Loel on 22/11/2024 */
 
 body {
-  font-family: system-ui;
+	font-family: system-ui;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: system-ui;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-wrap: balance;
-  text-wrap: pretty;
-  margin-block-start: 0;
-  margin-block-end: 1em;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: system-ui;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-wrap: balance;
+	text-wrap: pretty;
+	margin-block-start: 0;
+	margin-block-end: 1em;
 }
 
 p {
-  line-height: 1.5;
-  text-wrap: balance;
-  text-wrap: pretty;
+	line-height: 1.5;
+	text-wrap: balance;
+	text-wrap: pretty;
 }

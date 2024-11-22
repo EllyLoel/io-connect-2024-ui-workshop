@@ -10,35 +10,37 @@ Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
-limitations under the License. */
+limitations under the License. 
+
+Modified by Elly Loel on 22/11/2024 */
 
 a {
-  color: var(--text-2);
-  display: inline-grid;
-  grid-auto-flow: column;
-  gap: 0.5rem;
-  align-items: center;
-  text-underline-offset: 0.1em;
-  
-  &:hover {
-    color: var(--text-1);
+	color: var(--text-2);
+	display: inline-grid;
+	grid-auto-flow: column;
+	gap: 0.5rem;
+	align-items: center;
+	text-underline-offset: 0.1em;
 
-    & > svg > .secondary {
-      stroke: var(--text-2);
-      fill: var(--surface-document);
-    }
+	&:hover {
+		color: var(--text-1);
 
-    & > svg > .primary {
-      fill: var(--text-2);
-    }
-  }
+		& > svg > .secondary {
+			stroke: var(--text-2);
+			fill: var(--surface-document);
+		}
 
-  &:focus:not(:focus-visible) { 
-    outline: none 
-  }
+		& > svg > .primary {
+			fill: var(--text-2);
+		}
+	}
 
-  & > svg {
-    inline-size: 1rem;
-    block-size: 1rem;
-  }
+	&:focus:not(:focus-visible) {
+		outline: none;
+	}
+
+	& > svg {
+		inline-size: 1rem;
+		block-size: 1rem;
+	}
 }
