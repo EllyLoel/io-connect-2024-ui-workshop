@@ -1,3 +1,39 @@
+html:active-view-transition-type(product-page) {
+	.product-card-container:first-child {
+		& img {
+			view-transition-name: image;
+		}
+
+		& .product-meta {
+			> a {
+				view-transition-name: name;
+			}
+
+			> small {
+				view-transition-name: type;
+			}
+		}
+
+		& .product-cost {
+			> span:not([class]) {
+				view-transition-name: note;
+			}
+
+			> .money {
+				view-transition-name: price;
+			}
+		}
+
+		& button {
+			view-transition-name: button;
+
+			> div {
+				view-transition-name: button-inner;
+			}
+		}
+	}
+}
+
 ::view-transition-group(image),
 ::view-transition-group(name),
 ::view-transition-group(type),

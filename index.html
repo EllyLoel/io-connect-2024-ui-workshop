@@ -12,7 +12,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License. 
 
-Modified by Elly Loel on 22/11/2024 -->
+Modified by Elly Loel on 23/11/2024 -->
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -25,6 +25,17 @@ Modified by Elly Loel on 22/11/2024 -->
 		/>
 		<link rel="stylesheet" href="css/index.css" />
 		<script type="module" src="js/theme-toggle.js"></script>
+		<script>
+			const handleViewTransition = async (event) => {
+				if (!event.viewTransition) return;
+				event.viewTransition.types.add("product-page");
+				await event.viewTransition.finished;
+				event.viewTransition.types.delete("product-page");
+			};
+
+			window.addEventListener("pagereveal", handleViewTransition);
+			window.addEventListener("pageswap", handleViewTransition);
+		</script>
 		<script type="module" src="js/index.js"></script>
 	</head>
 	<body>

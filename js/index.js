@@ -12,8 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// Modified by Elly Loel on 22/11/2024
+// Modified by Elly Loel on 23/11/2024
 
-import "./product.js";
 import "./form.js";
 import "./cart.js";

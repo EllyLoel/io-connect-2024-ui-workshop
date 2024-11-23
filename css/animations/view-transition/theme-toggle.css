@@ -1,0 +1,13 @@
+html:active-view-transition-type(theme-toggle) {
+	& * {
+		view-transition-name: none;
+	}
+
+	&::view-transition-old(root) {
+		animation: none;
+	}
+
+	&::view-transition-new(root) {
+		animation: 0.5s ease-in-out circle-in-top-right forwards;
+	}
+}

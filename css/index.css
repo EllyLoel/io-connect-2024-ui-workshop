@@ -12,7 +12,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License. 
 
-Modified by Elly Loel on 22/11/2024 */
+Modified by Elly Loel on 23/11/2024 */
 
 @layer system, base, utilities, components, animations;
 
@@ -23,6 +23,7 @@ Modified by Elly Loel on 22/11/2024 */
 @import "./global/focus.css" layer(base);
 
 @import "./animations/generic.css" layer(animations);
+@import "./animations/view-transition/theme-toggle.css" layer(animations);
 @import "./animations/view-transition/product.css" layer(animations);
 
 @import "./components/body.css" layer(components);
