@@ -18,7 +18,7 @@ Modified by Elly Loel on 23/11/2024 -->
 	<head>
 		<meta charset="utf-8" />
 		<title>Same-document view transitions</title>
-		<meta name="theme-color" content="#ffffff" />
+		<meta name="theme-color" content="#000000" />
 		<link
 			rel="icon"
 			href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20270%20240%22%3E%3Cpath%20fill%3D%22%23f6c%22%20d%3D%22m5%205%20130%20225L265%205z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E"
@@ -37,6 +37,8 @@ Modified by Elly Loel on 23/11/2024 -->
 			window.addEventListener("pageswap", handleViewTransition);
 		</script>
 		<script type="module" src="js/index.js"></script>
+		<link rel="prefetch" href="/magic-kid/" />
+		<link rel="expect" blocking="render" href="#add-to-cart" />
 	</head>
 	<body>
 		<header>
@@ -120,7 +122,7 @@ Modified by Elly Loel on 23/11/2024 -->
 									<span>Limited Edition</span>
 									<span class="money">$29.99</span>
 								</div>
-								<button type="button" class="add-to-cart">
+								<button type="button" id="add-to-cart" class="add-to-cart">
 									<div>Add to card</div>
 								</button>
 							</div>
@@ -133,7 +135,7 @@ Modified by Elly Loel on 23/11/2024 -->
 							</picture>
 							<div class="product-details">
 								<div class="product-meta">
-									<a href="#">Discovery Paradise</a>
+									<a href="/magic-kid/">Discovery Paradise</a>
 									<small>Cotton Hoodie</small>
 								</div>
 								<div class="product-cost">
@@ -150,7 +152,7 @@ Modified by Elly Loel on 23/11/2024 -->
 							</picture>
 							<div class="product-details">
 								<div class="product-meta">
-									<a href="#">The Archer</a>
+									<a href="/magic-kid/">The Archer</a>
 									<small>Cotton Hoodie</small>
 								</div>
 								<div class="product-cost">
@@ -167,7 +169,7 @@ Modified by Elly Loel on 23/11/2024 -->
 							</picture>
 							<div class="product-details">
 								<div class="product-meta">
-									<a href="#">Strange World</a>
+									<a href="/magic-kid/">Strange World</a>
 									<small>Cotton Zip</small>
 								</div>
 								<div class="product-cost">
@@ -185,7 +187,7 @@ Modified by Elly Loel on 23/11/2024 -->
 							</picture>
 							<div class="product-details">
 								<div class="product-meta">
-									<a href="#">The Alchemist Returns</a>
+									<a href="/magic-kid/">The Alchemist Returns</a>
 									<small>Leatherman Jacket</small>
 								</div>
 								<div class="product-cost">
@@ -202,7 +204,7 @@ Modified by Elly Loel on 23/11/2024 -->
 							</picture>
 							<div class="product-details">
 								<div class="product-meta">
-									<a href="#">Defenders of the Moon</a>
+									<a href="/magic-kid/">Defenders of the Moon</a>
 									<small>Long Puffer</small>
 								</div>
 								<div class="product-cost">
@@ -220,7 +222,7 @@ Modified by Elly Loel on 23/11/2024 -->
 							</picture>
 							<div class="product-details">
 								<div class="product-meta">
-									<a href="#">No Mercy</a>
+									<a href="/magic-kid/">No Mercy</a>
 									<small>Ribbed Hoodie Puffer</small>
 								</div>
 								<div class="product-cost">
@@ -238,7 +240,7 @@ Modified by Elly Loel on 23/11/2024 -->
 							</picture>
 							<div class="product-details">
 								<div class="product-meta">
-									<a href="#">Shred Seattle</a>
+									<a href="/magic-kid/">Shred Seattle</a>
 									<small>Ribbed Puffer</small>
 								</div>
 								<div class="product-cost">
@@ -256,7 +258,7 @@ Modified by Elly Loel on 23/11/2024 -->
 							</picture>
 							<div class="product-details">
 								<div class="product-meta">
-									<a href="#">Duo Tone</a>
+									<a href="/magic-kid/">Duo Tone</a>
 									<small>Ribbed Puffer</small>
 								</div>
 								<div class="product-cost">
@@ -274,7 +276,7 @@ Modified by Elly Loel on 23/11/2024 -->
 							</picture>
 							<div class="product-details">
 								<div class="product-meta">
-									<a href="#">Camel Ride</a>
+									<a href="/magic-kid/">Camel Ride</a>
 									<small>Denim Buttonup</small>
 								</div>
 								<div class="product-cost">
@@ -292,7 +294,7 @@ Modified by Elly Loel on 23/11/2024 -->
 							</picture>
 							<div class="product-details">
 								<div class="product-meta">
-									<a href="#">Cobra Kai</a>
+									<a href="/magic-kid/">Cobra Kai</a>
 									<small>Camel Parka</small>
 								</div>
 								<div class="product-cost">
@@ -310,7 +312,7 @@ Modified by Elly Loel on 23/11/2024 -->
 							</picture>
 							<div class="product-details">
 								<div class="product-meta">
-									<a href="#">Blue Sky</a>
+									<a href="/magic-kid/">Blue Sky</a>
 									<small>Cyan Puffer</small>
 								</div>
 								<div class="product-cost">
@@ -327,7 +329,7 @@ Modified by Elly Loel on 23/11/2024 -->
 							</picture>
 							<div class="product-details">
 								<div class="product-meta">
-									<a href="#">Cobra Kai</a>
+									<a href="/magic-kid/">Cobra Kai</a>
 									<small>Camel Parka</small>
 								</div>
 								<div class="product-cost">
@@ -344,7 +346,7 @@ Modified by Elly Loel on 23/11/2024 -->
 							</picture>
 							<div class="product-details">
 								<div class="product-meta">
-									<a href="#">Broken Pavement</a>
+									<a href="/magic-kid/">Broken Pavement</a>
 									<small>Denim Jacket</small>
 								</div>
 								<div class="product-cost">
@@ -361,7 +363,7 @@ Modified by Elly Loel on 23/11/2024 -->
 							</picture>
 							<div class="product-details">
 								<div class="product-meta">
-									<a href="#">Vanilla Latte</a>
+									<a href="/magic-kid/">Vanilla Latte</a>
 									<small>Racer Jacket</small>
 								</div>
 								<div class="product-cost">
@@ -379,7 +381,7 @@ Modified by Elly Loel on 23/11/2024 -->
 							</picture>
 							<div class="product-details">
 								<div class="product-meta">
-									<a href="#">The 90s Called</a>
+									<a href="/magic-kid/">The 90s Called</a>
 									<small>Wind Breaker</small>
 								</div>
 								<div class="product-cost">
@@ -397,7 +399,7 @@ Modified by Elly Loel on 23/11/2024 -->
 							</picture>
 							<div class="product-details">
 								<div class="product-meta">
-									<a href="#">Snow Day</a>
+									<a href="/magic-kid/">Snow Day</a>
 									<small>Rain Jacket</small>
 								</div>
 								<div class="product-cost">
@@ -415,7 +417,7 @@ Modified by Elly Loel on 23/11/2024 -->
 							</picture>
 							<div class="product-details">
 								<div class="product-meta">
-									<a href="#">Sunny Beach</a>
+									<a href="/magic-kid/">Sunny Beach</a>
 									<small>Yellow Puffer</small>
 								</div>
 								<div class="product-cost">

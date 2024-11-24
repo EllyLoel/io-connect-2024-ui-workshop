@@ -32,8 +32,9 @@ Modified by Elly Loel on 22/11/2024 */
 	margin: 0;
 	border: 0.125rem solid var(--surface-3);
 	border-radius: var(--brand-border_radius);
+	transition: border-color 300ms ease-in-out;
 
-	&:focus-within {
+	&:has(:focus-visible) {
 		border-color: var(--text-2);
 	}
 
