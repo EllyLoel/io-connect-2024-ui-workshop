@@ -2,7 +2,7 @@
 const cartButton = document.querySelector('button[aria-label="Cart"]');
 
 // Get all add to cart buttons
-const addToCartButtons = document.querySelectorAll('button[id^="add-to-cart-"]');
+const addToCartButtons = document.querySelectorAll("button.add-to-cart");
 
 let cartItemCount = 0;
 
