@@ -16,8 +16,8 @@ Modified by Elly Loel on 22/11/2024 */
 
 :root {
 	/* brand */
-	--brand-primary: light-dark(deeppink, #f6c);
-	--brand-secondary: light-dark(cyan, #5bcefa);
+	--brand-primary: light-dark(oklch(62.3% 0.4 342.88), oklch(73.37% 0.21454 342.88));
+	--brand-secondary: light-dark(oklch(55% 0.15455 194.77), oklch(80.25% 0.12028 226.51));
 
 	/* configure the color palette */
 	--palette-hue: 250; /* <angle */

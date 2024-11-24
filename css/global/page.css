@@ -23,7 +23,7 @@ Modified by Elly Loel on 22/11/2024 */
 }
 
 html {
-	color-scheme: light dark;
+	color-scheme: dark light;
 	background: var(--surface-document);
 	color: var(--text-1);
 }
